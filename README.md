@@ -1,23 +1,30 @@
-# untitled
+# Node.js - Vuejs - Socket.IO
 
 ## Project setup
 ```
 yarn install
 ```
+### Execute nodejs Socket.IO server
+```
+node server.js
+```
 
-### Compiles and hot-reloads for development
+### In other cmd tab, compiles and hot-reloads Vuejs for development
 ```
 yarn serve
 ```
 
-### Compiles and minifies for production
+### Open url in the browser
 ```
-yarn build
+http://localhost:8080
 ```
 
-### Lints and fixes files
+### Or you can just build the app and run the server
 ```
-yarn lint
+yarn build
+node server.js
+
+open url  http://localhost:3000
 ```
 
 ### Customize configuration
