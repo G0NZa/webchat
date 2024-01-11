@@ -35,8 +35,10 @@ io.on("connection", async (socket) => {
         io.emit('read-msg', newMessage);
     });
 
-    socket.on('add-user', function(user){
-        users.push({ id: 'user_' + socket.id, name: user });
+    socket.on('add-user', user => {
+        if (!users.find(userObj => userObj.name === user)) {
+            users.push({ id: 'user_' + socket.id, name: user });
+        }
         io.emit('update-users', users);
     });
 

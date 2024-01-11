@@ -76,7 +76,7 @@ export default {
   },
   created() {
     // Client Socket events
-    this.socket = io(process.env.SOCKET_URL);
+    this.socket = io(process.env.VUE_APP_SOCKET_URL);
 
     // When the server emits a message, the client updates message list
     this.socket.on('read-msg', (message) => {
